@@ -6,7 +6,7 @@
 
   <groupId>com.hellomaven</groupId>
   <artifactId>hello_maven</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1</version>
   <packaging>war</packaging>
 
   <name>hello_maven Maven Webapp</name>
@@ -25,43 +25,18 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency><dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>2.46</version>
+        <scope>provided</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>1.19.4</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet -->
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-servlet</artifactId>
-      <version>1.19.4</version>
-    </dependency>
-     <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
     <dependency>
       <groupId>javax.ws.rs</groupId>
       <artifactId>javax.ws.rs-api</artifactId>
       <version>2.1.1</version>
     </dependency>
   </dependencies>
-
-  <distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>hello_maven</id>
-      <name>hello maven repository</name>
-      <url>scp://repo/maven2</url>
-      <layout>default</layout>
-    </repository>
-    <snapshotRepository>
-      <uniqueVersion>true</uniqueVersion>
-      <id>helloMavenSnapshot</id>
-      <name>Hello Maven Snapshots</name>
-      <url>sftp://propellers.net/maven</url>
-      <layout>legacy</layout>
-    </snapshotRepository>
-  </distributionManagement>
 
   <build>
     <finalName>hello_maven</finalName>
@@ -86,6 +61,10 @@
           <version>2.22.1</version>
         </plugin>
         <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
         </plugin>
@@ -96,6 +75,15 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
