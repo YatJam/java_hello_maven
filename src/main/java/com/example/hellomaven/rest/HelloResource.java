@@ -15,7 +15,8 @@ public class HelloResource {
   @Path("/health")
   @Produces(MediaType.TEXT_PLAIN)
   public Response getHealth(){
-    String health = "I am alive";
+   
+   String health = "I am alive";
     return Response.status(200).entity(health).build();
   }
 

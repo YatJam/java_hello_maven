@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1>Hello Maven Test</h1>
-    <p><a href="v1/hello/health=">Welcome</a></p>
+    <p>Welcome</p>
+    <p><a href="v1/hello/health">Health Check</a></p>
   </body>
 </html>
