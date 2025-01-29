@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/hello")
 
-public class SiteResource {
+public class HelloResource {
 
   @GET
   @Path("/health")
