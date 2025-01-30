@@ -2,18 +2,29 @@ package com.example.hellomaven.model;
 
 public class Health {
 
-  private String healthMessage = "I am alive";
+  private String message = "I am alive";
 
-  public Health(String healthMessage){
-    this.healthMessage = healthMessage;
+  public Health(String message){
+    this.message = message;
   }
 
-  public String getHealthMessage(){
-    return healthMessage;
+  /**
+	 * a string statement.
+	 * 
+	 * @return statement
+	 */
+  public String getMessage(){
+    return message;
   }
 
-  public void setHealthMessage(String healthMessage){
-    this.healthMessage = healthMessage;
+
+/**
+	 * setter for message.
+	 * 
+	 * @param message
+	 */
+  public void setHealthMessage(String message){
+    this.message = message;
   }
 
 }

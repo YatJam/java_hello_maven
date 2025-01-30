@@ -7,6 +7,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.example.hellomaven.model.Health;
+
 @Path("/hello")
 
 public class HelloResource {
@@ -15,9 +17,9 @@ public class HelloResource {
   @Path("/health")
   @Produces(MediaType.TEXT_PLAIN)
   public Response getHealth(){
-   
-   String health = "I am alive";
-    return Response.status(200).entity(health).build();
+   Health health = new Health("I am alive");
+   String healthStatus = health.getMessage();
+    return Response.status(200).entity(healthStatus).build();
   }
 
   @GET
