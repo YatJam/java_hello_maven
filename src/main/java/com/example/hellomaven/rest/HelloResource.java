@@ -23,7 +23,7 @@ public class HelloResource {
   }
 
   @GET
-  @Path("{clientName}")
+  @Path("/name/{clientName}")
   @Produces(MediaType.TEXT_PLAIN)
   public Response greetClient(@PathParam("clientName") String name) {
     String output = "Hi " + name;
