@@ -10,7 +10,6 @@ import javax.ws.rs.core.Response;
 import com.example.hellomaven.model.Health;
 
 @Path("/hello")
-
 public class HelloResource {
 
   @GET
