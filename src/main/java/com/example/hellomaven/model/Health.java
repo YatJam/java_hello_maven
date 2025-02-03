@@ -4,8 +4,8 @@ public class Health {
 
   private String message = "I am alive";
 
-  public Health(String message){
-    this.message = message;
+  public Health(){
+    
   }
 
   /**

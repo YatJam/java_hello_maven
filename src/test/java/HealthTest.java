@@ -11,7 +11,7 @@ public class HealthTest {
 
   @Before
   public void before(){
-    health = new Health("I am alive");
+    health = new Health();
   }
 
   @Test
